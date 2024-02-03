@@ -12,6 +12,10 @@ It is tested under Ubuntu Linux 18.04 and Python 3.7 environment, and requries s
 - torchvision 0.5.0
 - numpy 1.17.2
 
+## Algorithm
+
+![image](https://github.com/chen-qichao/SROE/blob/main/demo_fig/alg1.png)
+
 ## Training Pretrained Models
 
 Please download the datasets in folder
@@ -58,43 +62,19 @@ python test.py --model cifar100_wrn_s1_tune --score energy
 
 
 
-## Results
+## Performance
 
 Our model achieves the following average performance on 6 OOD datasets:
 
-### 1. MSP vs energy score with and without fine-tuned on [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
+![image](https://github.com/chen-qichao/SROE/blob/main/demo_fig/tab1.png)
 
-| Model name         |     FPR95       |
-| ------------------ |---------------- |
-| [MSP](https://arxiv.org/abs/1610.02136) |     51.35%     |
-| [ODIN](https://arxiv.org/abs/1706.02690) |     35.59%     |
-| [Mahalanobis](https://arxiv.org/abs/1807.03888) |     37.08%     |
-| [EBD](https://arxiv.org/abs/2010.03759) |     33.01%     |
-| SR (Ours) | 19.19% |
+![image](https://github.com/chen-qichao/SROE/blob/main/demo_fig/tab3.png)
 
-### 2. CIFAR-10 (in-distribution) vs SVHN (out-of-distribution) Score Distributions
+![image](https://github.com/chen-qichao/SROE/blob/main/demo_fig/tab4.png)
 
-![image](https://github.com/kuan-li/SparsityRegularization/blob/main/demo_fig/energy_score_density.png)
 
-### 3. Performance among different baselines for [WideResNet](https://arxiv.org/abs/1605.07146)
-CIFAR-10:
-| Method    |     FPR95       |
-| ------------------ |---------------- |
-| [Baseline](https://arxiv.org/abs/2010.03759) |     34.92%     |
-| [Outlier Exposure](https://arxiv.org/abs/1812.04606) |     8.53%     |
-| [Energy](https://arxiv.org/abs/2010.03759) |     3.32%     |
-| SROE (Ours) | 4.15% |
 
-CIFAR-100:
-
-| Method    |     FPR95       |
-| ------------------ |---------------- |
-| [Baseline](https://arxiv.org/abs/2010.03759) |     71.86%     |
-| [Outlier Exposure](https://arxiv.org/abs/1812.04606) |     56.57%     |
-| [Energy](https://arxiv.org/abs/2010.03759) |     49.28%     |
-| SROE (Ours) | 23.84% |
-
-![image](https://github.com/kuan-li/SparsityRegularization/blob/main/demo_fig/acc_auc.png)
+![image](https://github.com/chen-qichao/SROE/blob/main/demo_fig/acc_auc.png)
 
 
 
